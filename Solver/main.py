@@ -37,11 +37,13 @@ def valid_place(board, number, column, row):
 
 
 def print_board(board):
+    """Yeah, just prints the board <- you can do better"""
     for row in board:
         print(row)
 
 
 def core_of_solver(board):
+    """The main loop-solver"""
     for row in range(length):
         for column in range(length):
             if board[row][column] == 0:
@@ -61,6 +63,7 @@ def core_of_solver(board):
 
 
 def full_solver(board):
+    """All functions together with a nice comments and printing the solved board"""
     if core_of_solver(board):
         print("Solved!")
         print_board(board)
